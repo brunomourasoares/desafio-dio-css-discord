@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header_container {
+    background-image: url('assets/header_bg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 24px 78px 24px;
+    color: #FFFFFF;
+}
+.header_container .header_title {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Luckiest Guy', sans-serif;
+    padding: 0px 90px 20px 0px;
+}
+
+.header_container .header_description {
+    font-weight: 400;
+    padding: 0px 16px 0px 0px;
+}
+
+.header_container .header_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 25px;
+}
+
+.header_container .header_buttons .header_button1 {
+    width: 91%;
+    height: 3.375rem;
+    background: #FFFFFF;
+    border: 0;
+    border-radius: 28px;
+}
+
+.header_container .header_buttons .header_button2 {
+    width: 91%;
+    height: 3.375rem;
+    background: #23272A;
+    border: 0;
+    border-radius: 28px;
+    color: #FFFFFF;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_container img {
+    max-width: 100%;
+}
+
+.main_container .section1, .section2, .section3, .section4 {
+    padding: 40px 24px 40px 24px;
+    gap: 1.68rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.section_title1, .section_title2, .section_title3 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #23272A;
+}
+
+.section_title4 {
+    font-weight: 400;
+    font-size: 2rem;
+    color: #23272A;
+    font-family: 'Luckiest Guy', sans-serif;
+}
+
+.section_description1, .descriptin2, .description3, .description4 {
+    font-weight: 400;
+    color: #23272A;
+}
+
+.main_container .section2, .section4 {
+    background-color: #F6F6F6;
+}
+
+.footer_area {
+    background-color: #23272A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.footer_area img {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+    .header_container {
+        background-image: url('assets/header_bg_big.png');
+        background-size: cover;
+        text-align: center;
+    }
+
+    .header_container .header_title {
+        padding: 0 20rem;
+        font-size: 3.5rem;
+    }
+
+    .header_container .header_description {
+        padding: 1rem 12rem;
+    }
+
+    .header_container .header_buttons {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        width: 30rem;
+    }
+
+    .main_container .section1, .section2, .section3 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+
+    .main_container .section1 {
+        grid-template-areas: 
+            ". imagem texto .";
+    }
+
+    .main_container .section2 {
+        grid-template-areas: 
+            ". texto imagem .";
+        }
+
+    .main_container .section3 {
+        grid-template-areas: 
+            ". imagem texto .";
+    }
+
+    .main_container .section4 {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main_container .section1 img, .section2 img, .section3 img {
+        min-width: 379px;
+    }
+
+    .section1 img, .section2 img, .section3 img {
+        grid-area: imagem;
+    }
+
+    .section_text {
+        grid-area: texto;
+    }
+
+    .section_title1, .section_title2, .section_title3 {
+        grid-area: texto;
+        font-size: 2.0rem;
+        letter-spacing: -1px;
+    }
+
+    .section_title4 {
+        padding: 1rem 0;
+    }
+
+    .section_description1, .section_description2, .section_description3, .section_description4 {
+        color: #464b4e;
+    }
+}
